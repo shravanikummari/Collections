@@ -15,7 +15,6 @@ public class StudentManagementApp {
            Collections.sort(studentList, (s1, s2) -> s1.getStudentName().compareTo(s2.getStudentName()));
            System.out.println("Students sorted by name.");
        }
-
 public Student searchStudentByID(String studentID) {
     for (Student student : studentList) {
         if (student.getStudentId().equals(studentID)) {
