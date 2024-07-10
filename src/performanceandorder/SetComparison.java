@@ -23,23 +23,19 @@ public class SetComparison {
     public void comparePerformance() {
         int numberOfElements = 100;
 
-        // Measure time for adding elements to HashSet
         long startTime = System.nanoTime();
         addElements(hashSet, numberOfElements);
         long endTime = System.nanoTime();
         long hashSetTime = endTime - startTime;
 
-        // Measure time for adding elements to TreeSet
         startTime = System.nanoTime();
         addElements(treeSet, numberOfElements);
         endTime = System.nanoTime();
         long treeSetTime = endTime - startTime;
 
-        // Display results
         System.out.println("HashSet time: " + hashSetTime + " ns");
         System.out.println("TreeSet time: " + treeSetTime + " ns");
 
-        // Display elements
         System.out.println("HashSet elements:");
         displaySet(hashSet);
         System.out.println("TreeSet elements:");
