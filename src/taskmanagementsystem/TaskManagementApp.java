@@ -41,7 +41,6 @@ public class TaskManagementApp {
             }
         }
 
-        // Method to move a task to the top of the list by taskName
         public void moveTaskToTop(String taskName) {
             Iterator<Task> iterator = taskList.iterator();
             while (iterator.hasNext()) {
@@ -56,30 +55,23 @@ public class TaskManagementApp {
             System.out.println("Task '" + taskName + "' not found.");
         }
 
-        // Main method for testing
         public static void main(String[] args) {
             TaskManagementApp app = new TaskManagementApp();
 
-            // Adding tasks
             app.addTask(new Task("Task 1", "Description of Task 1"));
             app.addTask(new Task("Task 2", "Description of Task 2"));
             app.addTask(new Task("Task 3", "Description of Task 3"));
 
-            // Display tasks
             System.out.println("Initial list of tasks:");
             app.displayTasks();
 
-            // Removing a task
             app.removeTask("Task 2");
 
-            // Display tasks after removal
             System.out.println("\nList of tasks after removing 'Task 2':");
             app.displayTasks();
 
-            // Moving a task to the top
             app.moveTaskToTop("Task 3");
 
-            // Display tasks after moving to top
             System.out.println("\nList of tasks after moving 'Task 3' to the top:");
             app.displayTasks();
         }
