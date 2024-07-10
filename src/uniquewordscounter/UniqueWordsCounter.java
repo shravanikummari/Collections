@@ -12,7 +12,7 @@ public class UniqueWordsCounter {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] words = line.split("\\s+"); // split by whitespace
+                String[] words = line.split("\\s+");
                 for (String word : words) {
                     // Remove punctuation marks and convert to lowercase for simplicity
                     word = word.replaceAll("[^a-zA-Z]", "").toLowerCase();
@@ -38,12 +38,10 @@ public class UniqueWordsCounter {
     }
     public static void main(String[] args) {
         UniqueWordsCounter counter = new UniqueWordsCounter();
-        String filePath = "sample.txt"; // Replace with your file path
+        String filePath = "sample.txt";
 
-        // Read file and count unique words
         counter.readFile(filePath);
 
-        // Display unique words and their count
         counter.displayUniqueWords();
         System.out.println("\nTotal unique words: " + counter.getUniqueWordCount());
     }
