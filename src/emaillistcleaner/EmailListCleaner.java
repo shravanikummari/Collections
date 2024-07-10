@@ -28,11 +28,9 @@ public class EmailListCleaner {
         emails.add("soujanya@gmail.com");
         emails.add("pooja@gmail.com");
         emails.add("shravani@gmail.com");
-        // Add emails to the list
+
         cleaner.addEmails(emails);
-        // Remove duplicates
         cleaner.removeDuplicates();
-        // Display unique email addresses
         System.out.println("Unique email addresses:");
         cleaner.displayUniqueEmails();
     }
