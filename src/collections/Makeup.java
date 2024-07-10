@@ -15,5 +15,6 @@ public class Makeup {
         products.add("maskara");
         productname.addAll(products);
         System.out.println(productname);
+
     }
 }
